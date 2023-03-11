@@ -1,0 +1,117 @@
+/* exo-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/exo-v20-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/exo-v20-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* exo-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/exo-v20-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/exo-v20-latin-500.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+    background: #444547;
+}
+
+#my_accordion{
+    margin: 2% auto;
+    width: 90%;
+}
+
+#my_accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 2%;
+    background: #ffffff;
+    padding: 5%;
+    border-radius: 2%;
+}
+
+#my_accordion li label{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    font-weight: normal;
+    cursor: pointer;
+    color: #10af38;
+}
+
+.pic{
+    width: 50%;
+    cursor: pointer;
+}
+
+#my_accordion label + input[type="radio"]{
+    opacity: 0;
+}
+
+#my_accordion .image_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#my_accordion label + input[type="radio"]:checked + .image_wrapper{
+    max-height: 70vh;
+}
+
+#my_accordion li label:checked {
+    color: #000000;
+}
+
+@media screen and (max-width: 320px) {
+    #my_accordion li label{
+        font-size: 100%;
+    }
+}
+@media screen and (min-width: 820px) {
+    #my_accordion li label{
+        font-size: 180%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #my_accordion li label{
+        font-size: 200%;
+    }
+
+    #my_accordion{
+        margin: 2% auto;
+        width: 35%;
+    }
+
+    #my_accordion label + input[type="radio"]:checked + .image_wrapper{
+        max-height: 70vh;
+    }
+    
+    #my_accordion label + input[type="radio"]:hover + .image_wrapper{
+        max-height: 70vh;
+    }
+}
+
+#my_accordion li label i{
+    opacity: 0;
+}
+
+#my_accordion:hover li label i{
+    opacity: 1;
+}
