@@ -28,6 +28,7 @@ body{
 
 #my_accordion{
     margin: 2% auto;
+    width: 90%;
 }
 
 #my_accordion li{
@@ -44,7 +45,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 100%;
     font-weight: 500;
     cursor: pointer;
     color: #10af38;
@@ -56,4 +57,18 @@ body{
 
 #my_accordion label + input[type="radio"]{
     opacity: 0;
+}
+
+#my_accordion .image_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#my_accordion label + input[type="radio"]:checked + .image_wrapper{
+    max-height: 70vh;
 }
