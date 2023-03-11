@@ -45,14 +45,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 100%;
-    font-weight: 500;
+    font-size: 1em;
+    font-weight: normal;
     cursor: pointer;
     color: #10af38;
 }
 
 .pic{
     width: 50%;
+    cursor: pointer;
 }
 
 #my_accordion label + input[type="radio"]{
@@ -71,4 +72,46 @@ body{
 
 #my_accordion label + input[type="radio"]:checked + .image_wrapper{
     max-height: 70vh;
+}
+
+#my_accordion li label:checked {
+    color: #000000;
+}
+
+@media screen and (max-width: 320px) {
+    #my_accordion li label{
+        font-size: 100%;
+    }
+}
+@media screen and (min-width: 820px) {
+    #my_accordion li label{
+        font-size: 180%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #my_accordion li label{
+        font-size: 200%;
+    }
+
+    #my_accordion{
+        margin: 2% auto;
+        width: 35%;
+    }
+
+    #my_accordion label + input[type="radio"]:checked + .image_wrapper{
+        max-height: 70vh;
+    }
+    
+    #my_accordion label + input[type="radio"]:hover + .image_wrapper{
+        max-height: 70vh;
+    }
+}
+
+#my_accordion li label i{
+    opacity: 0;
+}
+
+#my_accordion:hover li label i{
+    opacity: 1;
 }
