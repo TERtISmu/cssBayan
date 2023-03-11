@@ -26,3 +26,34 @@ body{
     background: #444547;
 }
 
+#my_accordion{
+    margin: 2% auto;
+}
+
+#my_accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 2%;
+    background: #ffffff;
+    padding: 5%;
+    border-radius: 2%;
+}
+
+#my_accordion li label{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #10af38;
+}
+
+.pic{
+    width: 50%;
+}
+
+#my_accordion label + input[type="radio"]{
+    opacity: 0;
+}
